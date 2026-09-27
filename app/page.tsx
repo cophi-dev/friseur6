@@ -57,8 +57,8 @@ export default function HomePage() {
             Ich repariere Friseureinrichtung.
           </h1>
           <p className="mt-6 max-w-md text-lg leading-snug text-ink-soft">
-            Alla Baraniak, seit 15 Jahren in Bergkamen. Sieben Tage erreichbar. Täglich Waschsessel, Climazon und
-            Stuhlpumpen.
+            Alla Baraniak, Bergkamen. Seit 15 Jahren in der Branche. Sieben Tage erreichbar. Täglich Waschsessel,
+            Climazon und Stuhlpumpen.
           </p>
           <a
             href={`tel:${site.phoneTel}`}
