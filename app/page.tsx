@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ChairCutaway } from "@/components/chair-cutaway";
 import { ContactForm } from "@/components/contact-form";
 import { Stitch } from "@/components/mark";
 import { Photo } from "@/components/photo";
@@ -51,13 +52,19 @@ export default function HomePage() {
     <main id="inhalt">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <section className="mx-auto grid max-w-5xl items-start gap-10 px-5 pb-16 pt-10 sm:pb-24 sm:pt-16 lg:grid-cols-12 lg:gap-12">
+      <section className="mx-auto grid max-w-5xl items-start gap-8 px-5 pb-12 pt-10 sm:gap-10 sm:pb-16 sm:pt-16 lg:grid-cols-12 lg:gap-12">
         <div className="lg:col-span-6">
           <p className="text-sm font-medium tracking-wide text-cognac">Friseur6 · Bergkamen, Kreis Unna</p>
-          <h1 className="mt-4 font-serif text-[2.35rem] leading-[1.05] font-medium tracking-tight text-ink sm:text-5xl">
-            Ich verkaufe Friseureinrichtung — und repariere sie auch.
+          <h1 className="mt-4 font-serif text-[2.7rem] leading-[0.96] font-medium tracking-tight text-ink sm:text-6xl">
+            Ich verkaufe Friseureinrichtung
+            <span className="mt-2 block font-light text-cognac italic">und repariere sie auch.</span>
           </h1>
-          <p className="mt-6 font-serif text-xl leading-snug text-ink sm:text-2xl">
+        </div>
+        <div className="lg:col-span-6 lg:col-start-7 lg:row-span-2 lg:row-start-1">
+          <ChairCutaway />
+        </div>
+        <div className="lg:col-span-6">
+          <p className="font-serif text-xl leading-snug font-light text-ink italic sm:text-2xl">
             Sieben Tage erreichbar. Täglich Reparatur. Seit 15 Jahren die Technik dazu.
           </p>
           <p className="mt-6 text-lg leading-relaxed text-ink-soft">
@@ -77,17 +84,18 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
+      </section>
+
+      <div className="mx-auto max-w-5xl px-5 pb-16 sm:pb-20">
         <Photo
-          className="lg:col-span-6"
           src="/fotos/lager-4.jpg"
           alt="Friseureinrichtung aus dem Angebot von Friseur6 in Bergkamen"
           width={800}
           height={600}
           priority
-          frame
           caption="Aus dem Angebot in Bergkamen."
         />
-      </section>
+      </div>
 
       <section id="reparatur" className="border-t border-line">
         <div className="mx-auto max-w-5xl px-5 py-16 sm:py-24">

@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Outfit } from "next/font/google";
+import { Fraunces, Literata } from "next/font/google";
 import { CallBar } from "@/components/call-bar";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
@@ -10,11 +10,12 @@ const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-fraunces",
   display: "swap",
+  axes: ["SOFT", "WONK", "opsz"],
 });
 
-const outfit = Outfit({
+const literata = Literata({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-literata",
   display: "swap",
 });
 
@@ -50,7 +51,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="de" className={`${fraunces.variable} ${outfit.variable}`}>
+    <html lang="de" className={`${fraunces.variable} ${literata.variable}`}>
       <body className="antialiased">
         <a
           href="#inhalt"

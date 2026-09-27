@@ -16,7 +16,7 @@ export function Header() {
         <Link href="/" className="flex items-center gap-2.5 text-ink" aria-label="Friseur6, Startseite">
           <PumpMark className="h-8 w-8 shrink-0 text-cognac" />
           <span>
-            <span className="block font-serif text-xl leading-none tracking-tight">Friseur6</span>
+            <span className="block font-serif text-2xl leading-none font-medium tracking-tight italic">Friseur6</span>
             <span className="mt-1 block text-xs text-ink-soft">Bergkamen</span>
           </span>
         </Link>
