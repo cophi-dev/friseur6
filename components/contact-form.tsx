@@ -77,8 +77,8 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div role="status" aria-live="polite" className="border border-dashed border-cognac bg-foam px-5 py-10 sm:px-8">
-        <p className="font-serif text-xl leading-snug text-ink sm:text-2xl">
+      <div role="status" aria-live="polite" className="border border-line bg-foam px-5 py-10 sm:px-8">
+        <p className="text-xl leading-snug font-medium tracking-tight text-ink sm:text-2xl">
           Vielen Dank — Ihre Nachricht wurde gesendet.
         </p>
         <p className="mt-4 text-base leading-relaxed text-ink-soft">
@@ -192,7 +192,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="bg-cognac px-5 py-3 text-base font-medium text-foam hover:bg-cognac-deep disabled:opacity-60"
+        className="bg-ink px-5 py-3 text-sm font-medium text-white hover:bg-ink/80 disabled:opacity-60"
       >
         {status === "sending" ? "Wird gesendet …" : "Anfrage senden"}
       </button>

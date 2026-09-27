@@ -1,21 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Literata } from "next/font/google";
+import { Inter_Tight } from "next/font/google";
 import { CallBar } from "@/components/call-bar";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { getSiteUrl, site } from "@/lib/site";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const interTight = Inter_Tight({
   subsets: ["latin"],
-  variable: "--font-fraunces",
-  display: "swap",
-  axes: ["SOFT", "WONK", "opsz"],
-});
-
-const literata = Literata({
-  subsets: ["latin"],
-  variable: "--font-literata",
+  variable: "--font-inter-tight",
   display: "swap",
 });
 
@@ -44,14 +37,14 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f4efe4",
+  themeColor: "#f7f7f5",
   width: "device-width",
   initialScale: 1,
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="de" className={`${fraunces.variable} ${literata.variable}`}>
+    <html lang="de" className={interTight.variable}>
       <body className="antialiased">
         <a
           href="#inhalt"

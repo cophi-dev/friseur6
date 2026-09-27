@@ -14,12 +14,12 @@ export const metadata: Metadata = {
 export default function DatenschutzPage() {
   return (
     <main id="inhalt" className="mx-auto max-w-3xl px-5 py-14 sm:py-20">
-      <h1 className="font-serif text-4xl font-medium tracking-tight">Datenschutz</h1>
+      <h1 className="text-4xl font-medium tracking-tight">Datenschutz</h1>
       <p className="mt-6 leading-relaxed text-ink-soft">
         Hier steht, welche Daten beim Besuch dieser Website und beim Absenden des Kontaktformulars verarbeitet werden.
       </p>
 
-      <h2 className="mt-10 font-serif text-2xl font-medium">Verantwortliche</h2>
+      <h2 className="mt-10 text-2xl font-medium">Verantwortliche</h2>
       <p className="mt-4 leading-relaxed text-ink-soft">
         {site.owner}
         <br />
@@ -40,7 +40,7 @@ export default function DatenschutzPage() {
         </a>
       </p>
 
-      <h2 className="mt-10 font-serif text-2xl font-medium">Hosting</h2>
+      <h2 className="mt-10 text-2xl font-medium">Hosting</h2>
       <p className="mt-4 leading-relaxed text-ink-soft">
         Diese Website wird bei Vercel gehostet. Beim Aufruf einer Seite können dabei Verbindungsdaten verarbeitet
         werden, etwa IP-Adresse, Datum und Uhrzeit, aufgerufene Adresse und Angaben zum Browser. Das ist nötig, um die
@@ -56,7 +56,7 @@ export default function DatenschutzPage() {
         . Eine Übermittlung in die USA ist dabei möglich.
       </p>
 
-      <h2 className="mt-10 font-serif text-2xl font-medium">Kontaktformular</h2>
+      <h2 className="mt-10 text-2xl font-medium">Kontaktformular</h2>
       <p className="mt-4 leading-relaxed text-ink-soft">
         Wenn Sie das Formular senden, verarbeite ich Name, E-Mail, Nachricht und, falls angegeben, Salon oder Firma
         sowie Telefonnummer. Die Angaben nutze ich, um Ihre Anfrage zu beantworten. Rechtsgrundlage ist Art. 6 Abs. 1
@@ -77,12 +77,12 @@ export default function DatenschutzPage() {
         sofern keine gesetzliche Aufbewahrung entgegensteht. Es gibt keinen Newsletter.
       </p>
 
-      <h2 className="mt-10 font-serif text-2xl font-medium">Cookies</h2>
+      <h2 className="mt-10 text-2xl font-medium">Cookies</h2>
       <p className="mt-4 leading-relaxed text-ink-soft">
         Diese Website setzt keine Analyse- und keine Marketing-Cookies ein.
       </p>
 
-      <h2 className="mt-10 font-serif text-2xl font-medium">Ihre Rechte</h2>
+      <h2 className="mt-10 text-2xl font-medium">Ihre Rechte</h2>
       <p className="mt-4 leading-relaxed text-ink-soft">
         Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit
         und Widerspruch, soweit die Voraussetzungen dafür vorliegen. Eine Einwilligung können Sie mit Wirkung für die

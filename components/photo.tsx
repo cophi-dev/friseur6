@@ -3,38 +3,28 @@ import Image from "next/image";
 type PhotoProps = {
   src: string;
   alt: string;
-  width: number;
-  height: number;
   priority?: boolean;
   caption?: string;
   className?: string;
-  frame?: boolean;
+  aspect?: "portrait" | "wide";
 };
 
-export function Photo({
-  src,
-  alt,
-  width,
-  height,
-  priority = false,
-  caption,
-  className = "",
-  frame = false,
-}: PhotoProps) {
+export function Photo({ src, alt, priority = false, caption, className = "", aspect = "portrait" }: PhotoProps) {
+  const ratio = aspect === "wide" ? "aspect-[3/2]" : "aspect-[4/5]";
+
   return (
     <figure className={className}>
-      <div className={frame ? "border border-dashed border-cognac p-2 sm:p-3" : ""}>
+      <div className={`relative overflow-hidden bg-line ${ratio}`}>
         <Image
           src={src}
           alt={alt}
-          width={width}
-          height={height}
+          fill
           priority={priority}
-          sizes="(min-width: 1024px) 560px, 100vw"
-          className="h-auto w-full"
+          sizes={aspect === "wide" ? "(min-width: 1024px) 1100px, 100vw" : "(min-width: 1024px) 560px, 100vw"}
+          className="object-cover object-center"
         />
       </div>
-      {caption ? <figcaption className="mt-3 text-sm leading-relaxed text-ink-soft">{caption}</figcaption> : null}
+      {caption ? <figcaption className="mt-3 text-sm text-ink-soft">{caption}</figcaption> : null}
     </figure>
   );
 }

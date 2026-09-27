@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 export function Footer() {
   return (
     <footer className="border-t border-line">
-      <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-5 gap-y-2 px-5 py-5 text-sm text-ink-soft">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-5 gap-y-2 px-5 py-5 text-sm text-ink-soft sm:px-8">
         <span>
           {site.name}, {site.street}, {site.postalCode} {site.city}
         </span>

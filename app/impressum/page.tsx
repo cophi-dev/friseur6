@@ -14,8 +14,8 @@ export const metadata: Metadata = {
 export default function ImpressumPage() {
   return (
     <main id="inhalt" className="mx-auto max-w-3xl px-5 py-14 sm:py-20">
-      <h1 className="font-serif text-4xl font-medium tracking-tight">Impressum</h1>
-      <h2 className="mt-10 font-serif text-2xl font-medium">Angaben gemäß § 5 DDG</h2>
+      <h1 className="text-4xl font-medium tracking-tight">Impressum</h1>
+      <h2 className="mt-10 text-2xl font-medium">Angaben gemäß § 5 DDG</h2>
       <p className="mt-4 leading-relaxed text-ink-soft">
         {site.name}
         <br />
@@ -25,7 +25,7 @@ export default function ImpressumPage() {
         <br />
         {site.postalCode} {site.city}
       </p>
-      <h2 className="mt-10 font-serif text-2xl font-medium">Kontakt</h2>
+      <h2 className="mt-10 text-2xl font-medium">Kontakt</h2>
       <p className="mt-4 leading-relaxed text-ink-soft">
         Telefon:{" "}
         <a href={`tel:${site.phoneTel}`} className="text-ink underline decoration-line underline-offset-4">
@@ -42,7 +42,7 @@ export default function ImpressumPage() {
           {site.email}
         </a>
       </p>
-      <h2 className="mt-10 font-serif text-2xl font-medium">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+      <h2 className="mt-10 text-2xl font-medium">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
       <p className="mt-4 leading-relaxed text-ink-soft">
         {site.owner}
         <br />

@@ -1,19 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-paper: #f6ead8;
-  --color-paper-deep: #ead4b8;
-  --color-foam: #fff8ef;
-  --color-ink: #1c1410;
-  --color-ink-soft: #4a3b32;
-  --color-cognac: #8e3d22;
-  --color-cognac-deep: #5e2614;
-  --color-leather: #c4895a;
-  --color-oxblood: #4e1e24;
-  --color-cream: #f8f1e6;
-  --color-line: #ddcbb6;
-  --font-serif: var(--font-fraunces), "Iowan Old Style", Georgia, serif;
-  --font-sans: var(--font-literata), Georgia, serif;
+  --color-paper: #f7f7f5;
+  --color-foam: #ffffff;
+  --color-ink: #111111;
+  --color-ink-soft: #3f3f3f;
+  --color-cognac: #c45c26;
+  --color-cognac-deep: #9a4216;
+  --color-line: #e4e4e4;
+  --font-sans: var(--font-inter-tight), Inter, "Helvetica Neue", sans-serif;
 }
 
 html {
@@ -22,12 +17,9 @@ html {
 
 body {
   background-color: var(--color-paper);
-  background-image:
-    radial-gradient(ellipse 70% 45% at 0% -10%, #fff4e4 0%, transparent 55%),
-    radial-gradient(ellipse 40% 30% at 100% 0%, #f0d2bc 0%, transparent 50%);
   color: var(--color-ink);
   font-family: var(--font-sans);
-  padding-bottom: 4.75rem;
+  padding-bottom: 4.5rem;
 }
 
 @media (min-width: 640px) {
@@ -37,43 +29,26 @@ body {
 }
 
 ::selection {
-  background: #e7b89a;
+  background: #f0d2c2;
   color: var(--color-ink);
 }
 
-.font-serif {
-  font-variation-settings: "SOFT" 40, "WONK" 1, "opsz" 72;
-}
-
-.stitch-motion {
-  animation: stitch-draw 9s linear infinite;
-}
-
-.pump-motion {
-  animation: pump-sink 4.8s ease-in-out infinite;
-  transform-box: fill-box;
-  transform-origin: center top;
-}
-
-@keyframes stitch-draw {
-  to {
-    stroke-dashoffset: -36;
-  }
-}
-
-@keyframes pump-sink {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(11px);
-  }
-}
-
 :focus-visible {
-  outline: 2px solid var(--color-cognac);
+  outline: 2px solid var(--color-ink);
   outline-offset: 3px;
+}
+
+.fade-in {
+  animation: fade-in 0.7s ease both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -81,8 +56,7 @@ body {
     scroll-behavior: auto;
   }
 
-  .stitch-motion,
-  .pump-motion {
+  .fade-in {
     animation: none;
   }
 }
