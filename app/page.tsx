@@ -50,25 +50,28 @@ export default function HomePage() {
     <main id="inhalt">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <section className="mx-auto grid max-w-6xl items-center gap-2 px-5 pt-10 pb-8 sm:px-8 sm:pt-16 sm:pb-12 lg:grid-cols-12 lg:gap-6">
-        <div className="lg:col-span-5">
+      <section className="mx-auto grid max-w-6xl items-center gap-y-6 px-5 pt-10 pb-8 sm:px-8 sm:pt-16 sm:pb-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] lg:gap-x-8 lg:gap-y-8">
+        <div className="relative z-10 min-w-0 lg:col-start-1 lg:row-start-1">
           <p className="text-[11px] tracking-[0.16em] text-ink-soft uppercase">Friseur6 · Bergkamen</p>
-          <h1 className="mt-5 max-w-xl text-5xl leading-[0.92] font-semibold tracking-[-0.045em] sm:text-7xl">
-            Ich repariere Friseureinrichtung.
+          <h1 className="mt-5 text-[2.5rem] leading-[0.92] font-semibold tracking-[-0.045em] sm:text-6xl lg:text-[4rem] xl:text-7xl">
+            Ich repariere
+            <br />
+            <span className="whitespace-nowrap">Friseureinrichtung.</span>
           </h1>
         </div>
-        <div className="lg:col-span-7 lg:col-start-6 lg:row-span-2 lg:row-start-1">
+        <div className="relative z-0 min-w-0 overflow-hidden lg:col-start-2 lg:row-span-2 lg:row-start-1">
           <Image
             src="/hero-illustration.png"
             alt="Illustration: Waschsessel und Friseurstuhl"
             width={1280}
             height={720}
-            priority
-            sizes="(min-width: 1024px) 58vw, 100vw"
-            className="hero-illustration h-auto w-full"
+            preload
+            quality={95}
+            sizes="(min-width: 1280px) 42vw, (min-width: 1024px) 40vw, 100vw"
+            className="block h-auto w-full"
           />
         </div>
-        <div className="lg:col-span-5">
+        <div className="relative z-10 min-w-0 lg:col-start-1 lg:row-start-2">
           <p className="max-w-md text-lg leading-snug text-ink-soft">
             Alla Baraniak, Bergkamen. Seit 15 Jahren in der Branche. Sieben Tage erreichbar. Täglich Waschsessel,
             Climazon und Stuhlpumpen.

@@ -38,17 +38,6 @@ body {
   outline-offset: 3px;
 }
 
-.hero-illustration {
-  -webkit-mask-image:
-    linear-gradient(to right, transparent, #000 7%, #000 93%, transparent),
-    linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent);
-  -webkit-mask-composite: source-in;
-  mask-image:
-    linear-gradient(to right, transparent, #000 7%, #000 93%, transparent),
-    linear-gradient(to bottom, transparent, #000 7%, #000 93%, transparent);
-  mask-composite: intersect;
-}
-
 .fade-in {
   animation: fade-in 0.7s ease both;
 }
